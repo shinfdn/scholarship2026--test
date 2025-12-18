@@ -1,0 +1,486 @@
+/* ==========Base Design========== */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    margin: 2rem auto;
+    max-width: 700px;
+    padding: 1rem;
+    align-items: center;
+}
+
+a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+.charCount.over {
+    color: red;
+    font-weight: bold;
+}
+
+.error_text{
+    color: red;
+    
+}
+
+h1 {
+    color: #009688;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-weight: normal;
+}
+
+h2 {
+    color: #009688;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+h3 {
+    color: #009688;
+    font-size: 1.0rem;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+.required-badge {
+    background-color: #ff0000; /* 赤色 */
+    color: #fff;    
+    padding: 3px 5px;
+    font-size: 0.7rem;
+    border-radius: 4px;
+    margin-left: 1px;
+    vertical-align: middle;
+}
+
+.non-required-badge {
+    background-color: #2a3957; /* 赤色 */
+    color: #fff;  
+    padding: 3px 5px;
+    font-size: 0.7rem;
+    border-radius: 4px;
+    margin-left: 1px;
+    vertical-align: middle;
+}
+
+/* ==========Base Design End========== */
+
+/* ==========Smart phone========== */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .topTitle h1, .topTitle h2, .topTitle h3 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .form-inline-name,
+    .form-inline-postal,
+    .form-inline-school-name-code,
+    .form-inline-kensaku {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .form-inline-name > div,
+    .form-inline-postal > div,
+    .form-inline-school-name-code > div {
+        width: 100%;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select,
+    textarea {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .form-group,
+    .form-group-email,
+    .form-group-input {
+        padding: 10px 0;
+    }
+
+    button#kensaku {
+        width: 100%;
+    }
+
+    ul#suggestionList {
+        max-height: 150px;
+    }
+    }
+/* ==========Smart phone End========== */
+
+
+/* ==========Detail Design Setting========== */
+.topTitle {
+    max-width: 600px;
+    margin: 0 auto; /* 中央寄せ */
+}
+
+.belowForm {
+    max-width: 550px;
+    margin: 0 auto; /* 中央寄せ */
+}
+
+.attention {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.deadline {
+    font-size: 1.0rem;
+    color: #00bcd4;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.description {
+    font-size: 0.8rem;
+    color: #b0b0b0;
+    margin-bottom: 0.5rem;
+}
+
+label#formLabel {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* 赤枠スタイル */
+.error-highlight {
+    border: 2px solid red !important;
+    background-color: #fff0f0;
+}
+
+/* エラーテキストがデフォルトで非表示の場合に対応 */
+.error_text {
+    display: none;
+    color: red;
+    font-size: 0.9em;
+    margin-top: 4px;
+}
+
+
+/* ==========Detail Design Setting End========== */
+
+
+/* ==========Form Group Design========== */
+.form-group {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* テキストインプットのデザイン */
+.form-group-input > div{
+    max-width: 550px;
+    min-width: 150px; 
+}
+
+.form-group-input > input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-group-email > div{
+    max-width: 550px;
+    min-width: 150px; 
+}
+
+.form-group-email > input {
+    background-color: #f0f0f0;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-group-school-code {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group-school-code-sub {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+/* ==========Form Group Design End========== */
+
+
+/* ==========Form Inline Design========== */
+.form-inline-name {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-inline-name > div {
+    flex: 1;
+}
+
+.form-inline-name input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* 共通：フォームのインライングループ */
+.form-inline-postal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.form-inline-postal > div{
+    flex: 1;
+    min-width: 150px; /* スマホ対応 */
+}
+
+.form-inline-postal input,
+.form-inline-postal select {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-inline-school-name-code {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.form-inline-school-name-code > div {
+    flex: 1;
+}
+
+.form-inline-school-name-code input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+}
+
+
+.form-inline-kensaku {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-inline-kensaku > div {
+    flex: 1;
+}
+
+.form-inline-kensaku input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-inline-kensaku input::placeholder {
+    font-size: 0.8rem;
+}
+
+/* ==========Form Inline Design End========== */
+
+
+/* ==========Input Design========== */
+/* 入力欄共通スタイル */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+select {
+    width: 100%;
+    max-width: 550px;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.2s ease;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+::placeholder {
+    color: #b0b0b0;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #009688;
+    outline: none;
+    background-color: #fff;
+}
+
+textarea {
+    width: 100%;
+    max-width: 525px;
+    min-height: 100px;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.2s ease;
+    font-family: 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+/* 選択リストや補助テキストのデザイン */
+select {
+    background-color: #fff;
+}
+/* ==========Input Design End========== */
+
+
+/* ==========Button Design========== */
+button#formSubmit, input[type="submit"] {
+    background-color: #009688;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+/* 学校名検索ボタン */
+button#kensaku, input[type="submit"] {
+    background-color: #009688;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.0rem;
+    height: 2.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* ==========Button Design End========== */
+
+
+/* ==========uggestionListのデザイン========== */
+#suggestionList {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 0;
+    margin-top: 0.75rem;
+    list-style: none;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-size: 1rem;
+    text-align: center;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+    position: relative;
+}
+
+/* カスタムスクロールバー（Chrome, Edge） */
+#suggestionList::-webkit-scrollbar {
+    width: 8px;
+}
+
+#suggestionList::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+#suggestionList::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* 各リストアイテム */
+#suggestionList li {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#suggestionList li:hover {
+    background-color: #f0faf7;
+    color: #009C7A;
+    /* background-color: #ffffff;
+    color: #a1a1a1; */
+}
+
+#suggestionList li:last-child {
+    border-bottom: none;
+}
+
+/* 候補がないときのメッセージ */
+#suggestionList::before {
+    content: attr(data-placeholder);
+    display: block;
+    padding: 0.7rem;
+    background-color: #f0faf7;
+    color: #009C7A;
+    /* background-color: #ffffff;
+    color: #a1a1a1; */
+    font-size: 0.95rem;
+    pointer-events: none;
+}
+
+/* スクロールできることを視覚的に示す影 */
+#suggestionList::after {
+    content: "";
+    position: sticky;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent, #fff);
+    display: block;
+}
+/* ==========uggestionListのデザインここまで========== */
+
+
+/* ==========Check Box Design========== */
+.checkbox-wrapper {
+    /* background-color: #f9f9f9; */
+    border: 1px solid #ccc;
+    padding: 0.6rem;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* チェックボックス自体 */
+input[type="checkbox"] {
+    transform: scale(1.3);
+    accent-color: #009688;
+    margin: 0;
+}
+
+/* ==========Check Box Design End========== */
