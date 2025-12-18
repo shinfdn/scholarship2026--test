@@ -1,0 +1,53 @@
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    margin: 2rem auto;
+    max-width: 700px;
+    padding: 1rem;
+    align-items: center;
+}
+
+a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+.charCount.over {
+    color: red;
+    font-weight: bold;
+}
+
+.error_text{
+    color: red;
+}
+
+h1 {
+    color: #009688;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-weight: normal;
+}
+
+h2 {
+    color: #009688;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+h3 {
+    color: #009688;
+    font-size: 1.0rem;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+p{
+    margin-top: 50px;
+    text-align: center;
+}

@@ -1,0 +1,80 @@
+function validateSelection() {
+            // 例: 選択がされているか確認する
+            // const prefecture = document.getElementById('prefSelect').value;
+            const nameSei = document.getElementById('sei').value;
+            const nameMei = document.getElementById('mei').value;
+            const kanaSei = document.getElementById('sei-kana').value;
+            const kanaMei = document.getElementById('mei-kana').value;
+            const email = document.getElementById('email').value;
+            const grade = document.getElementById('grade').value;
+            const birth = document.getElementById('birth').value;
+            const postalCode = document.getElementById('postal-code').value;
+            const prefecture = document.getElementById('prefecture').value;
+            const area = document.getElementById('area').value;
+            const banchi = document.getElementById('banchi').value;
+            const phoneNumber = document.getElementById('phone-number').value;
+            const schoolName = document.getElementById('school-name').value;
+            const schoolCode = document.getElementById('school-code').value;
+            const gender = document.getElementById('gender').value;
+            const text1 = document.getElementById('text1').value;
+            const interesting = document.getElementById('interesting').value;
+            const checkboxContainerHurdle = document.getElementById('checkbox-container-hurdle').value;
+            const text2 = document.getElementById('text2').value;
+            const bunnri = document.getElementById('bunnri').value;
+            const consent = document.getElementById('consent').value;
+            const scholarship = document.getElementById('scholarship').value;
+            const magazine = document.getElementById('magazine').value;
+
+            const values = [
+                nameSei, nameMei, kanaSei, kanaMei, email, grade, birth, postalCode, prefecture, area, banchi, phoneNumber, schoolName, schoolCode, gender, text1, interesting, checkboxContainerHurdle, text2, bunnri, consent, scholarship, magazine
+            ];
+
+            if (values.some(v => v !== '')) {
+                return false;
+            }
+
+            // フォーム送信（または次のステップ）
+            alert('送信準備完了！');
+            return true;
+        }
+
+
+
+<div class="form-group">
+                <label id="formLabel">
+                    高校名検索
+                </label>
+                <div id="kanaList" style="margin-bottom: 10px; flex-wrap: wrap; display: flex; gap: 5px;"></div>
+                <ul id="suggestionList" style="border: 0.5px solid #ccc; max-height: 210px; overflow-y: auto; padding: 0;"></ul>
+
+                <p id="whenSchoolNotFound" class="description">
+                    自分の学校名が見つからない場合は、キーワードを短くして検索したり、正しい学校名かどうかを検索したりしてください。上記を行っても見つからない場合は、 <a href="https://www.shinfdn.org/contact" target="_blank" rel="noopener noreferrer">こちら</a> からお問い合わせください。
+                </p>
+            </div>
+
+
+<!-- 所属学校に関する情報を検索して入力して下さい -->
+            <!-- <div class="form-group">
+                <label id="formLabel">
+                    高校名キーワード検索
+                    <span class="required-badge">必須</span>
+                </label>
+                <p class="description">
+                    学校名を入力して、「検索」を押してください。部分検索もできます。
+                    <br>例）「やまだ進太郎高校」の方の場合
+                    <br>　　「やまだ進太郎高校」「やまだ」「進太郎」で検索
+                </p>
+                <div class="form-inline-name">
+                    <div>
+                        <input type="text" id="searchWord" name="学校キーワード検索" placeholder="学校名を入力" />
+                    </div>
+                    <button id="prefSearch" type="button">検索</button>
+                </div>
+
+                <div id="kanaList" style="margin-bottom: 10px; flex-wrap: wrap; display: flex; gap: 5px;"></div>
+                <ul id="suggestionList" style="border: 0.5px solid #ccc; max-height: 210px; overflow-y: auto; padding: 0;"></ul>
+
+                <p id="whenSchoolNotFound">
+                    自分の学校名が見つからない場合は、キーワードを短くして検索したり、正しい学校名かどうかを検索したりしてください。上記を行っても見つからない場合は、 <a href="https://www.shinfdn.org/contact" target="_blank" rel="noopener noreferrer">こちら</a> からお問い合わせください。
+                </p>
+            </div> -->
