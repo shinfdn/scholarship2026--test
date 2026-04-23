@@ -127,21 +127,21 @@
                     </div>
                     <div>
                         <label>都道府県</label>
-                        <select name="都道府県" id="prefecture" data-formrun-type="region prefecture-jp" data-formrun-required></select>
+                        <select name="都道府県" id="prefecture" data-formrun-type="region prefecture-jp" data-formrun-target="郵便番号" data-formrun-required></select>
                         <div class="error_text" data-formrun-show-if-error="都道府県">入力してください</div>
                     </div>
                 </div>
                 <div class="form-inline-postal">
                     <div>
                         <label>市区町村</label>
-                        <input type="text" id="area" name="市区町村" data-formrun-type="locality street-address" data-formrun-required>
+                        <input type="text" id="area" name="市区町村" data-formrun-type="locality street-address" data-formrun-target="郵便番号" data-formrun-required>
                         <div class="error_text" data-formrun-show-if-error="市区町村">入力してください</div>
                     </div>
                 </div>
                 <div class="form-inline-postal">
                     <div>
                         <label>番地</label>
-                        <input type="text" name="番地" id="banchi"  data-formrun-required>
+                        <input type="text" name="番地" id="banchi" data-formrun-target="郵便番号" data-formrun-required>
                         <div class="error_text" data-formrun-show-if-error="番地">入力してください</div>
                     </div>
                 </div>
